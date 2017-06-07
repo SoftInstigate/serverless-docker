@@ -1,11 +1,11 @@
 services:
 - docker
 script:
-- docker build -t softinstigate/serverless-docker .
+- docker build -t softinstigate/serverless .
 after_success:
 - if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
     docker login -u="$DOCKER_USER" -p="$DOCKER_PASS";
-    docker push softinstigate/serverless-docker:latest;
+    docker push softinstigate/serverless:latest;
   fi
 env:
   global:
