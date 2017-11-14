@@ -2,7 +2,7 @@ FROM softinstigate/maven-aws
 
 MAINTAINER SoftInstigate <info@softinstigate.com>
 
-ENV VERSION=1.24
+ENV VERSION=1.24.1
 
 # Install node.js
 RUN curl -sL https://deb.nodesource.com/setup_6.x > node_install.sh
