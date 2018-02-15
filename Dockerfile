@@ -10,7 +10,7 @@ RUN chmod +x ./node_install.sh
 RUN ./node_install.sh
 RUN apt-get update
 RUN apt-get install -y apt-utils
-RUN apt-get install -y nodejs
+RUN apt-get install -y nodejs yarn
 
 # Install serverless cli
 RUN npm install serverless@$VERSION -g
