@@ -6,7 +6,7 @@ A [docker image](https://hub.docker.com/r/softinstigate/serverless/) for running
 
 This can be useful for building and deploying serverless stacks from CI environments.
 
-The `RELEASE` variable exported in [.travis.yml](.travis.yml) contains the [serverless release](https://github.com/serverless/serverless/releases) to be built.
+The `RELEASE` global variable in [.travis.yml](.travis.yml) contains the [serverless release](https://github.com/serverless/serverless/releases) to be built.
 
 ## Base image ##
 
