@@ -2,7 +2,7 @@ FROM softinstigate/maven-aws
 
 MAINTAINER SoftInstigate <info@softinstigate.com>
 
-ENV VERSION=1.26.1
+ARG VERSION
 
 # Install node.js and yarn
 RUN curl -sL https://deb.nodesource.com/setup_6.x > node_install.sh

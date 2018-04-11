@@ -1,12 +1,10 @@
 services:
-- docker
+  - docker
 script:
-- docker build -t softinstigate/serverless .
+  - export SLS_VERSION=1.26.1
+  - ./bin/build.sh
 after_success:
-- if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
-    docker login -u="$DOCKER_USER" -p="$DOCKER_PASS";
-    docker push softinstigate/serverless:latest;
-  fi
+  - ./bin/push.sh
 env:
   global:
   - secure: Q88a8j51jcn82alNszPA3BW9HfgNyIju4yshgfIaIkr1j4ajY+SxCGp5EnbrsMzYRdBBw8ScrwIByMfIfM9XDF3i+DZnPenOzVBjj0+YElb1GBip5ohh8Z4pFoWKbQx+Y81sJ/NDa2eFNEyw4CIZgPSiqA3RJg7+BO1zX9K8gZG46WejJ2pXZhMROdPC9tgi0ZlPPGDDkfu5/ujlSMuMWA8nqzCnWBQ3HpInKXH3pX+i4sJ92qgM3VOX8tNDv+042KJcorrp+6HX1oTXcdKA9rkbHX5X4u0H/Q+VT+t5F/1J28dhdzBIUFUK+53/9J1kpoParQPNzf2Vj1sKy7ECaLqjpOqsJAn1aPz45CxgKFlxW3WPnGreJJAu6tW5aRaSZRZGu/GaSILcynOTVjbTYLISbv+ZZvHwtUoR1UWLGUe9OEOCqDfyhXYAFvOwXI95rN08g/1rV18Cn1MDYt3cUG5h3lS4fjeqm5zVRqgUKS/vCBPmQERsRlr8YPsSV1Bn3qgseDhNbpvWseonBeUoCOMJPq6UDfOiIQQiwgSFl/E4aOu6NkZYvC2beFe0fzmcBsoMjgfb+DeWHm2DwiZgi+LhipW0OmMmw3NoCxuX+H5ThA23TXlQrGKlxHGKYW6QWyTYb5VAdSOQYnGNPyYrWU1F1QmDjcBhncW4p5wbcQQ=
