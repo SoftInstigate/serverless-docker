@@ -1,6 +1,6 @@
 FROM softinstigate/maven-aws
 
-MAINTAINER SoftInstigate <info@softinstigate.com>
+LABEL maintainer="SoftInstigate <info@softinstigate.com>"
 
 ARG RELEASE
 
