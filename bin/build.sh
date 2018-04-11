@@ -1,7 +1,7 @@
 #!/bin/bash
-if [[ -z $SLS_VERSION ]]; then
-    echo "Error: undefined SLS_VERSION environment variable."
+if [[ -z $RELEASE ]]; then
+    echo "Error: undefined RELEASE environment variable."
     exit 1
 fi
-docker build --build-arg VERSION="$SLS_VERSION" -t softinstigate/serverless .
-docker tag softinstigate/serverless:latest softinstigate/serverless:"$SLS_VERSION"
+docker build --build-arg RELEASE="$RELEASE" -t softinstigate/serverless .
+docker tag softinstigate/serverless:latest softinstigate/serverless:"$RELEASE"

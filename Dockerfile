@@ -2,7 +2,7 @@ FROM softinstigate/maven-aws
 
 MAINTAINER SoftInstigate <info@softinstigate.com>
 
-ARG VERSION
+ARG RELEASE
 
 # Install node.js and yarn
 RUN curl -sL https://deb.nodesource.com/setup_6.x > node_install.sh
@@ -14,4 +14,4 @@ RUN apt-get update
 RUN apt-get install -y apt-utils nodejs yarn
 
 # Install serverless cli
-RUN npm install serverless@$VERSION -g
+RUN npm install serverless@$RELEASE -g

@@ -1,7 +1,9 @@
 services:
   - docker
 script:
-  - export SLS_VERSION=1.26.1
+  # RELEASE contains the serverless release to build
+  # Ref: https://github.com/serverless/serverless/releases
+  - export RELEASE=1.26.1 
   - ./bin/build.sh
 after_success:
   - ./bin/push.sh
