@@ -15,4 +15,5 @@ RUN apt-get install -y apt-utils nodejs yarn
 
 # Install serverless cli
 RUN yarn global add serverless@$RELEASE
-RUN echo "Installed serverless version $(serverless --version)"
+
+ENTRYPOINT [ "serverless" ]
