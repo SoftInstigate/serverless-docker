@@ -8,6 +8,13 @@ This can be useful for building and deploying serverless stacks from CI environm
 
 The `RELEASE` global variable in [.travis.yml](.travis.yml) contains the [serverless release](https://github.com/serverless/serverless/releases) to be built.
 
+## Example ##
+
+```
+$ docker pull softinstigate/serverless
+$ docker run --rm softinstigate/serverless --version
+```
+
 ## Base image ##
 
 [softinstigate/maven-aws](https://hub.docker.com/r/softinstigate/maven-aws/)
