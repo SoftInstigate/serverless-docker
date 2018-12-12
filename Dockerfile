@@ -16,4 +16,13 @@ RUN apt-get install -y apt-utils nodejs yarn
 # Install serverless cli
 RUN yarn global add serverless@$RELEASE
 
+RUN echo "================================================="
+RUN echo "maven version: $(mvn --version)"
+RUN echo "awscli version: $(aws --version)"
+RUN echo "ecs-cli version: $(ecs-cli --version)"
+RUN echo "node version: $(node --version)"
+RUN echo "yarn version: $(yarn --version)"
+RUN echo "serverless version: $(serverless --version)"
+RUN echo "================================================="
+
 ENTRYPOINT [ "serverless" ]
