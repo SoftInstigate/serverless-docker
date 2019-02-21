@@ -1,4 +1,4 @@
-# serverless-docker #
+# serverless #
 
 [![Build Status](https://travis-ci.org/SoftInstigate/serverless-docker.svg?branch=master)](https://travis-ci.org/SoftInstigate/serverless-docker)
 
