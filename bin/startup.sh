@@ -1,9 +1,9 @@
 #!/bin/bash
 echo "================================================="
-echo "maven version: $(mvn --version)"
-echo "awscli version: $(aws --version)"
-echo "ecs-cli version: $(ecs-cli --version)"
-echo "node version: $(node --version)"
-echo "yarn version: $(yarn --version)"
-echo "serverless version: $(serverless --version)"
+mvn --version
+aws --version
+ecs-cli --version
+echo "node $(node --version)"
+echo "yarn $(yarn --version)"
+echo "serverless $(serverless --version)"
 echo "================================================="
