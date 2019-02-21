@@ -1,4 +1,4 @@
-FROM softinstigate/maven-aws
+FROM softinstigate/maven-aws:v1.5.0
 
 LABEL maintainer="SoftInstigate <info@softinstigate.com>"
 
@@ -14,7 +14,7 @@ RUN apt-get update
 RUN apt-get install -y apt-utils nodejs yarn
 
 # Install serverless cli
-RUN yarn global add serverless@$RELEASE
+RUN yarn global add serverless@${RELEASE}
 
 COPY bin/startup.sh .
 RUN "./startup.sh"
