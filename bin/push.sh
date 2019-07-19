@@ -1,6 +1,6 @@
 #!/bin/bash
 if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
-    docker login -u="$DOCKER_USER" -p="$DOCKER_PASS";
+    echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
     docker push softinstigate/serverless:latest;
     docker push softinstigate/serverless:"$RELEASE";
 fi
