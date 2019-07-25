@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e 
 if [[ -z $RELEASE ]]; then
     echo "Error: undefined RELEASE environment variable."
     exit 1
