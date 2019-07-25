@@ -1,7 +1,11 @@
+dist: xenial
 services:
   - docker
-script:
+git:
+  depth: 3
+before_script:
   - ./bin/build.sh
+script:
   - ./bin/push.sh
 env:
   global:
