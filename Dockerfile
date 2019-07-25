@@ -10,8 +10,8 @@ RUN chmod +x ./node_install.sh
 RUN ./node_install.sh
 RUN curl -sS http://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
 RUN echo "deb http://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
-RUN apt-get update
-RUN apt-get install -y apt-utils nodejs yarn groff
+RUN sudo rm -rf /var/lib/apt/lists/* && sudo apt update
+RUN apt install -y apt-utils nodejs yarn groff
 
 # Install serverless cli
 RUN yarn global add serverless@${RELEASE}
