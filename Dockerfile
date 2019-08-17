@@ -1,4 +1,4 @@
-FROM softinstigate/maven-aws:2.0.0
+FROM softinstigate/maven-aws:2.0.1
 
 LABEL maintainer="SoftInstigate <info@softinstigate.com>"
 
