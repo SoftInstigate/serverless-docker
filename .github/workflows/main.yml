@@ -9,10 +9,10 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
-      env:
-        RELEASE: 1.50.0
     - name: Build
       run: ./bin/build.sh
+      env:
+        RELEASE: 1.50.0
     - name: Push
       run: ./bin/push.sh
       env:
