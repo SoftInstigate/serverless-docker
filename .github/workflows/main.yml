@@ -4,13 +4,13 @@ on: [push]
 
 jobs:
   build:
-    env:
-      RELEASE: 1.50.0
 
     runs-on: ubuntu-18.04
     
     steps:
     - uses: actions/checkout@v1
+      env:
+        RELEASE: 1.50.0
     - name: Build
       run: ./bin/build.sh
     - name: Push
