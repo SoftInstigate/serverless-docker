@@ -12,7 +12,7 @@ jobs:
     - name: Build
       run: ./bin/build.sh
       env:
-        RELEASE: 1.50.0
+        RELEASE: 1.52.0
     - name: Push
       run: ./bin/push.sh
       env:
