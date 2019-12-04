@@ -28,5 +28,5 @@ Included packages from base image:
 
 ## Additional packages ##
 
-- Nodejs 8.x
+- Nodejs 10.x
 - Serverless cli
