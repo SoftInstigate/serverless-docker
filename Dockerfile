@@ -6,7 +6,7 @@ ARG RELEASE
 
 # Install node.js and yarn
 RUN rm -rf /var/lib/apt/lists/*
-RUN curl -sL https://deb.nodesource.com/setup_10.x > node_install.sh
+RUN curl -sL https://deb.nodesource.com/setup_12.x > node_install.sh
 RUN chmod +x ./node_install.sh
 RUN ./node_install.sh
 RUN curl -sS http://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
