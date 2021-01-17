@@ -52,3 +52,7 @@ Components: 3.2.7
 
 - Nodejs 12 LTS
 - Serverless cli 2.x
+
+## Pull requests
+
+If you need a specific version of the serverless cli which has not been built yet, just fork this repo and open a PR after changing the line in .travis.yml setting the `RELEASE=` to an existing [serverless framework release](https://github.com/serverless/serverless) and we'll merge it quickly. After Travis-CI has finished its work, check the new [docker image](https://hub.docker.com/r/softinstigate/serverless/) and pull your version.
