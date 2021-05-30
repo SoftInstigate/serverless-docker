@@ -11,4 +11,4 @@ env:
   global:
     # RELEASE contains the serverless release to build
     # Ref: https://github.com/serverless/serverless/releases
-    - RELEASE=2.19.0
+    - RELEASE=2.43.1
